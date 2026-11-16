@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Campus Sustainability Assistant - Explore simple ways to make your campus more sustainable.">
+
+    <title>Campus Sustainability Assistant</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app-container">
+
+        <!-- Header -->
+        <header class="app-header">
+            <div class="brand">
+                <div class="brand-icon">🌱</div>
+
+                <div>
+                    <h1>Campus Sustainability Assistant</h1>
+                    <p>Your guide to a greener campus</p>
+                </div>
+            </div>
+
+            <div class="status">
+                <span class="status-dot"></span>
+                Sustainability Guide
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <!-- Welcome Section -->
+            <section class="welcome-section">
+                <span class="welcome-tag">🌍 Sustainable Campus Initiative</span>
+
+                <h2>Small Steps, <span>Greener Future.</span></h2>
+
+                <p>
+                    Explore simple and practical ways to protect our environment
+                    and build a sustainable campus.
+                </p>
+            </section>
+
+            <!-- Suggested Topics -->
+            <section class="topics-section">
+                <h3>Explore Sustainability Topics</h3>
+
+                <div class="topic-grid">
+
+                    <button class="topic-card" type="button"
+                        data-question="How can I save electricity?">
+                        <span class="topic-icon">⚡</span>
+                        <span>Energy</span>
+                    </button>
+
+                    <button class="topic-card" type="button"
+                        data-question="How can I conserve water?">
+                        <span class="topic-icon">💧</span>
+                        <span>Water</span>
+                    </button>
+
+                    <button class="topic-card" type="button"
+                        data-question="How should I manage waste?">
+                        <span class="topic-icon">♻️</span>
+                        <span>Waste</span>
+                    </button>
+
+                    <button class="topic-card" type="button"
+                        data-question="What is sustainable transportation?">
+                        <span class="topic-icon">🚲</span>
+                        <span>Transport</span>
+                    </button>
+
+                </div>
+            </section>
+
+            <!-- Chat Section -->
+            <section class="chat-section">
+
+                <div class="chat-header">
+                    <div>
+                        <h3>💬 Sustainability Chat</h3>
+                        <p>Ask questions and discover sustainable practices.</p>
+                    </div>
+
+                    <span class="chat-status">Online</span>
+                </div>
+
+                <div class="chat-box" id="chatBox" aria-live="polite">
+
+                    <div class="bot-message">
+                        <strong>🌱 Assistant</strong>
+                        <p>
+                            Hello! Welcome to Campus Sustainability Assistant.
+                            Ask me about energy, water, waste, transportation,
+                            or sustainability. Let's make our campus greener!
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- Message Input -->
+                <div class="input-area">
+
+                    <input
+                        type="text"
+                        id="userInput"
+                        placeholder="Ask me about sustainability..."
+                        aria-label="Enter your sustainability question"
+                        autocomplete="off"
+                    >
+
+                    <button type="button" id="sendButton">
+                        Send ➤
+                    </button>
+
+                </div>
+
+                <p class="input-hint">
+                    Press Enter to send your message
+                </p>
+
+            </section>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="app-footer">
+            <p>🌱 Campus Sustainability Assistant</p>
+            <span>Promoting awareness for a greener tomorrow.</span>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,388 @@
+
+/* =====================================
+   CAMPUS SUSTAINABILITY ASSISTANT
+   Modern Eco Green Dashboard
+===================================== */
+
+/* Global Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #edf5ed;
+    color: #263b2c;
+    min-height: 100vh;
+    padding: 30px 20px;
+}
+
+/* Main Application */
+.app-container {
+    max-width: 1050px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(31, 70, 42, 0.09);
+}
+
+/* Header */
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 24px 35px;
+    border-bottom: 1px solid #e8eee8;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.brand-icon {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e3f2e5;
+    border-radius: 14px;
+    font-size: 28px;
+}
+
+.brand h1 {
+    color: #176b35;
+    font-size: 23px;
+    margin-bottom: 5px;
+}
+
+.brand p {
+    color: #78877b;
+    font-size: 13px;
+}
+
+.status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #eff8f0;
+    color: #287a42;
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.status-dot {
+    width: 9px;
+    height: 9px;
+    background: #35a853;
+    border-radius: 50%;
+}
+
+/* Main Content */
+.main-content {
+    padding: 35px;
+}
+
+/* Welcome Section */
+.welcome-section {
+    background: linear-gradient(120deg, #e4f3e6, #f2f8ed);
+    padding: 32px;
+    border-radius: 15px;
+    margin-bottom: 32px;
+}
+
+.welcome-tag {
+    display: inline-block;
+    color: #287a42;
+    background: #ffffff;
+    padding: 8px 13px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+
+.welcome-section h2 {
+    font-size: 32px;
+    color: #254b30;
+    margin-bottom: 12px;
+}
+
+.welcome-section h2 span {
+    color: #27934b;
+}
+
+.welcome-section p {
+    color: #627567;
+    font-size: 15px;
+    line-height: 1.7;
+    max-width: 650px;
+}
+
+/* Topic Cards */
+.topics-section {
+    margin-bottom: 32px;
+}
+
+.topics-section h3 {
+    color: #304d36;
+    font-size: 19px;
+    margin-bottom: 17px;
+}
+
+.topic-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.topic-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 17px;
+    background: #ffffff;
+    border: 1px solid #e3ece4;
+    border-radius: 12px;
+    color: #365b3e;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.topic-card:hover {
+    background: #eff8f0;
+    border-color: #91c99c;
+    transform: translateY(-3px);
+}
+
+.topic-icon {
+    font-size: 25px;
+}
+
+/* Chat Section */
+.chat-section {
+    border: 1px solid #e4ebe4;
+    border-radius: 15px;
+    padding: 22px;
+    background: #ffffff;
+}
+
+.chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 18px;
+}
+
+.chat-header h3 {
+    color: #275536;
+    font-size: 19px;
+    margin-bottom: 6px;
+}
+
+.chat-header p {
+    color: #849187;
+    font-size: 13px;
+}
+
+.chat-status {
+    background: #e7f6e9;
+    color: #268342;
+    padding: 7px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Chat Display */
+.chat-box {
+    height: 320px;
+    overflow-y: auto;
+    padding: 15px;
+    background: #f7faf7;
+    border: 1px solid #e6eee6;
+    border-radius: 12px;
+    margin-bottom: 16px;
+}
+
+.user-message,
+.bot-message {
+    max-width: 85%;
+    padding: 12px 15px;
+    margin-bottom: 12px;
+    border-radius: 12px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+    font-size: 14px;
+}
+
+.user-message {
+    margin-left: auto;
+    background: #e0f1e4;
+    color: #285738;
+    border-bottom-right-radius: 3px;
+}
+
+.bot-message {
+    margin-right: auto;
+    background: #edf2ed;
+    color: #354b39;
+    border-bottom-left-radius: 3px;
+}
+
+.user-message strong,
+.bot-message strong {
+    display: block;
+    margin-bottom: 5px;
+    color: #236a39;
+}
+
+.bot-message p {
+    margin: 0;
+}
+
+/* Input Area */
+.input-area {
+    display: flex;
+    gap: 12px;
+}
+
+.input-area input {
+    flex: 1;
+    min-width: 0;
+    padding: 14px 16px;
+    border: 1px solid #dce7dc;
+    border-radius: 10px;
+    outline: none;
+    font-size: 14px;
+    background: #ffffff;
+}
+
+.input-area input:focus {
+    border-color: #3b9856;
+    box-shadow: 0 0 0 3px rgba(59, 152, 86, 0.10);
+}
+
+.input-area button {
+    padding: 13px 23px;
+    background: #258443;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.input-area button:hover {
+    background: #176b35;
+}
+
+.input-area button:focus-visible,
+.topic-card:focus-visible {
+    outline: 2px solid #176b35;
+    outline-offset: 3px;
+}
+
+.input-hint {
+    color: #98a39a;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+/* Footer */
+.app-footer {
+    padding: 20px 30px;
+    text-align: center;
+    border-top: 1px solid #e8eee8;
+    background: #fafcfa;
+}
+
+.app-footer p {
+    color: #357348;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.app-footer span {
+    color: #929d93;
+    font-size: 12px;
+}
+
+/* Responsive Design */
+@media (max-width: 700px) {
+
+    body {
+        padding: 12px;
+    }
+
+    .app-header {
+        padding: 20px;
+        align-items: flex-start;
+    }
+
+    .brand h1 {
+        font-size: 18px;
+    }
+
+    .status {
+        display: none;
+    }
+
+    .main-content {
+        padding: 20px;
+    }
+
+    .welcome-section {
+        padding: 23px;
+    }
+
+    .welcome-section h2 {
+        font-size: 25px;
+    }
+
+    .topic-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .chat-section {
+        padding: 15px;
+    }
+
+    .chat-header h3 {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 420px) {
+
+    .input-area {
+        flex-direction: column;
+    }
+
+    .input-area button {
+        width: 100%;
+    }
+
+    .topic-card {
+        padding: 13px;
+        font-size: 13px;
+    }
+
+    .chat-box {
+        height: 300px;
+    }
+}
